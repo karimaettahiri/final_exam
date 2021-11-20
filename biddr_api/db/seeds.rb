@@ -41,7 +41,7 @@ users = User.all
     )
     if a.valid? #youi can also use q.persisted?
         rand(1..5).times do
-            Bid.create(price:Faker::Commerce.price, auction:a, user: users.sample)
+            Bid.create(price:Faker::Commerce.price, bid_date:Faker::Date.backward(days: 14), auction:a, user: users.sample)
         end
        
     end
