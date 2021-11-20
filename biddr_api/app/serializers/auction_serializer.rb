@@ -7,7 +7,7 @@ class AuctionSerializer < ActiveModel::Serializer
     :created_at,
     :updated_at,
     :ends_at,
-    :reserveprice,
+    :reserveprice
     
   )
 
@@ -15,7 +15,7 @@ class AuctionSerializer < ActiveModel::Serializer
   belongs_to :user
   class UserSerializer < ActiveModel::Serializer
     attributes(
-      :id,:first_name,:last_name,:email, :full_name
+      :id,:first_name,:last_name,:email,:full_name
     )
   end
   has_many :bids
